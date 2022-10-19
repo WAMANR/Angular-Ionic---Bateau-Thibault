@@ -1,0 +1,28 @@
+.item-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width:490px) { 
+    .data-cart-row { 
+        display: flex;
+        flex-direction: column;   
+    } 
+} 
+
+@media (max-width:380px) { 
+    .item-ion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item-row{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        text-overflow: clip;
+    }
+} 

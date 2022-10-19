@@ -5,9 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
-    path: 'single-recipice',
-    loadChildren: () => import('./single-recipice/single-recipice.module').then( m => m.SingleRecipicePageModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
   }
 
 ];
