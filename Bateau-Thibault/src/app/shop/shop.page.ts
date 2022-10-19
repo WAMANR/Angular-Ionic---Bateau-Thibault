@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import '/home/meteor314/Desktop/school-project/Angular-Ionic---Bateau-Thibault/Bateau-Thibault/src/assets/products.json';
+import 'C:/Users/arouichi/Documents/Insta/Angular/Projet/Angular-Ionic---Bateau-Thibault/Bateau-Thibault/src/assets/products.json';
 
 @Component({
   selector: 'app-shop',
