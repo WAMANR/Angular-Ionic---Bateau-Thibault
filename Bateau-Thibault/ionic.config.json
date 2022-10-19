@@ -1,7 +1,8 @@
 {
   "name": "Bateau-Thibault",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
