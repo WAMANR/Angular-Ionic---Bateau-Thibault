@@ -7,9 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'cart',
-    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+    path: 'single-recipice',
+    loadChildren: () => import('./single-recipice/single-recipice.module').then( m => m.SingleRecipicePageModule)
   }
+
 ];
 @NgModule({
   imports: [

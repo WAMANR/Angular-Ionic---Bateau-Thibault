@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true" appSwipe
+             (swipeLeft)="onSwipeLeft($event)"
+             (swipeRight)="onSwipeRight($event)" padding>
+<h1 class="ion-text-center">{{
+  recipice ? recipice.completeName : ''
+  }}</h1>
+</ion-content>
