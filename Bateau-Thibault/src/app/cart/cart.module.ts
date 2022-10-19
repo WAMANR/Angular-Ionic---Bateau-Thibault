@@ -8,7 +8,9 @@ import { CartPageRoutingModule } from './cart-routing.module';
 
 import { CartPage } from './cart.page';
 import { SharedModule } from '../sharedModule/shared.module';
+
 import {SwipeModule} from '../swipe/swipe.module';
+
 
 
 @NgModule({
