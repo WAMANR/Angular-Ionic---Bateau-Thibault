@@ -7,7 +7,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { ContactPageRoutingModule } from './contact-routing.module';
 
-import { HeaderComponent } from '../header/header.component';
+import {SharedModule} from '../sharedModule/shared.module';
 
 @NgModule({
   imports: [
@@ -15,8 +15,9 @@ import { HeaderComponent } from '../header/header.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    ContactPageRoutingModule
+    ContactPageRoutingModule,
+    SharedModule
   ],
-  declarations: [ContactPage, HeaderComponent]
+  declarations: [ContactPage]
 })
 export class ContactPageModule {}

@@ -6,8 +6,9 @@ import { RecipePage } from './recipe.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { RecipePageRoutingModule } from './recipe-routing.module';
+import {SharedModule} from '../sharedModule/shared.module';
 
-import { HeaderComponent } from '../header/header.component';
+
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { HeaderComponent } from '../header/header.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RecipePageRoutingModule
+    RecipePageRoutingModule,
+    SharedModule
   ],
-  declarations: [RecipePage, HeaderComponent]
+  declarations: [RecipePage]
 })
 export class RecipePageModule {}

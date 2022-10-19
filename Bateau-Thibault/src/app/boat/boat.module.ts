@@ -7,8 +7,9 @@ import { BoatPage } from './boat.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { BoatPageRoutingModule } from './boat-routing.module';
+import {SharedModule} from '../sharedModule/shared.module';
 
-import { HeaderComponent } from '../header/header.component';
+
 
 @NgModule({
   imports: [
@@ -16,8 +17,9 @@ import { HeaderComponent } from '../header/header.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    BoatPageRoutingModule
+    BoatPageRoutingModule,
+    SharedModule
   ],
-  declarations: [BoatPage, HeaderComponent]
+  declarations: [BoatPage]
 })
 export class BoatPageModule {}
