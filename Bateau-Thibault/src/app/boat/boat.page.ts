@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { BoatService } from '../services/boat.service';
 import { Boats } from '../models/boats';
 
@@ -23,8 +23,13 @@ export class BoatPage {
       }
   }
 
-  onLoadRecipice(boatList){
-
+  onLoadBoat(boat : Boats){
+    let navigationExtras: NavigationExtras = {
+      state:{
+        recipe : boat
+      }
+    }
+    this.router.navigate(['/tabs/single-recipice'],navigationExtras);
   }
 
 }
