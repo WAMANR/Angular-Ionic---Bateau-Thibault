@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../recipe/recipe.module').then(m => m.RecipePageModule)
       },
       {
+        path: 'single-recipice',
+        loadChildren: () => import('../single-recipice/single-recipice.module').then(m => m.SingleRecipicePageModule)
+      },
+      {
         path: 'shop',
         loadChildren: () => import('../shop/shop.module').then(m => m.ShopPageModule)
       },

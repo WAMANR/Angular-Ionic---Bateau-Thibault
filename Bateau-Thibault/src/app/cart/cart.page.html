@@ -6,7 +6,38 @@
       <ion-col size="12">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Shop</ion-card-title>
+            <ion-card-title
+              >Select your restaurant:
+              <!-- drop down list to select a restaurant -->
+              <p>{{ handlerMessage }}</p>
+              <p>{{ roleMessage }}</p>
+
+              <ion-list>
+                <ion-item>
+                  <ion-select
+                    placeholder="Select restaurant : "
+                    (ionChange)="changeOption($event)"
+                  >
+                    <ion-select-option value="1">
+                      Bistrot des Gascons</ion-select-option
+                    >
+                    <ion-select-option value="2"
+                      >Les Fous de l'Île</ion-select-option
+                    >
+                    <ion-select-option value="3">
+                      Bistrot Landais</ion-select-option
+                    >
+                    <ion-select-option value="4"
+                      >Villa 9-Trois</ion-select-option
+                    >
+                    <ion-select-option value="5">
+                      Bistrot du Sommelier</ion-select-option
+                    >
+                    <ion-select-option value="6"> Test</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <ion-list>
@@ -19,28 +50,18 @@
                     <p>Category : {{product.category}}</p>
                   </ion-label>
                   <div class="data-cart-row" slot="end">
-                    <ion-button> 
-                      Product Quantity : 
-                      {{
-                        product.quantity
-                      }}
-                     </ion-button>
-    
-                     <ion-button >
-                      Price : 
-                      {{
-                        product.quantity * product.price
-                      }}
-                     </ion-button>
+                    <ion-button>
+                      Product Quantity : {{ product.quantity }}
+                    </ion-button>
+
+                    <ion-button>
+                      Price : {{ product.quantity * product.price }}
+                    </ion-button>
                   </div>
                 </div>
+                <hr />
               </ion-item>
-              <h1>
-                Total Price : 
-                {{
-                  total
-                }}
-              </h1>
+              <h1>Total Price : {{ total }}</h1>
             </ion-list>
           </ion-card-content>
         </ion-card>
