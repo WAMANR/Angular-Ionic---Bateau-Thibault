@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import {NavController, ToastController} from '@ionic/angular';
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +10,7 @@ export class CartPage implements OnInit {
   handlerMessage = '';
   roleMessage = '';
 
-  constructor(private toastController: ToastController) {}
+  constructor(private toastController: ToastController, private navCtrl: NavController) {}
 
   ngOnInit() {}
 
@@ -51,5 +51,14 @@ export class CartPage implements OnInit {
     });
 
     await toast.present();
+  }
+
+  goBack() {
+    this.navCtrl.navigateBack(['/tabs/shop']);
+  }
+
+  onSwipeLeft($event) {
+    //this.navCtrl.navigateBack(['/', 'items', previousItem.id]);
+    this.goBack();
   }
 }
