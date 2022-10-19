@@ -3,7 +3,9 @@
 <ion-content [fullscreen]="true" appSwipe
              (swipeLeft)="onSwipeLeft($event)"
              (swipeRight)="onSwipeRight($event)" padding>
-<h1 class="ion-text-center">{{
-  recipice ? recipice.completeName : ''
-  }}</h1>
+<h1 class="ion-text-center">{{recipice ? recipice.completeName : ''}}</h1>
+<div class="container">
+  <img src="{{recipice? recipice.src : ''}}.png">
+  <p>{{recipice? recipice.description : ''}}</p>
+</div>
 </ion-content>

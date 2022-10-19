@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
-import {NavController} from "@ionic/angular";
+import {NavController} from '@ionic/angular';
 
 
 @Component({

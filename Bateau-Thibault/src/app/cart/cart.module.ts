@@ -9,6 +9,9 @@ import { CartPageRoutingModule } from './cart-routing.module';
 import { CartPage } from './cart.page';
 import { SharedModule } from '../sharedModule/shared.module';
 
+import {SwipeModule} from '../swipe/swipe.module';
+
+
 
 @NgModule({
   imports: [
@@ -16,7 +19,8 @@ import { SharedModule } from '../sharedModule/shared.module';
     FormsModule,
     IonicModule,
     CartPageRoutingModule,
-    SharedModule
+    SharedModule,
+    SwipeModule
   ],
   declarations: [CartPage]
 })
