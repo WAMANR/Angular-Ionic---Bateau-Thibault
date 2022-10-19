@@ -11,28 +11,29 @@
           <ion-card-content>
             <ion-list>
               <ion-item *ngFor="let product of products">
-                <ion-label>
-                  <h2>{{ product.name }}</h2>
-                  <p>{{ product.description }}</p>
-                  <h2>Price : {{product.price}} €</h2>
-                  <p>Category : {{product.category}}</p>
-                </ion-label>
-                
-                <ion-button slot="end" > 
-                  Product Quantity : 
-                  {{
-                    product.quantity
-                  }}
-                 </ion-button>
-
-                 <ion-button slot="end">
-                  Price : 
-                  {{
-                    product.quantity * product.price
-                  }}
-                 </ion-button>
-
-
+                <div class="item-row">
+                  <ion-label>
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <h2>Price : {{product.price}} €</h2>
+                    <p>Category : {{product.category}}</p>
+                  </ion-label>
+                  <div class="data-cart-row" slot="end">
+                    <ion-button> 
+                      Product Quantity : 
+                      {{
+                        product.quantity
+                      }}
+                     </ion-button>
+    
+                     <ion-button >
+                      Price : 
+                      {{
+                        product.quantity * product.price
+                      }}
+                     </ion-button>
+                  </div>
+                </div>
               </ion-item>
               <h1>
                 Total Price : 

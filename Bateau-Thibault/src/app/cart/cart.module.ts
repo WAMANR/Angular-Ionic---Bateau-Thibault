@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CartPageRoutingModule } from './cart-routing.module';
 
 import { CartPage } from './cart.page';
-
+import { HeaderComponent } from '../header/header.component';
+import { SharedModule } from '../sharedModule/shared.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CartPageRoutingModule
+    CartPageRoutingModule,
+    SharedModule
   ],
   declarations: [CartPage]
 })
