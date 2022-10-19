@@ -1,0 +1,50 @@
+.content{
+  font-family:AppFont !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top-content{
+  display:flex; 
+  flex-direction:column;
+  justify-content:center;
+  align-items:center
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonsCOL{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+app-redirection-button{
+  width: 100%;
+}
+
+h1{
+  padding: 24px 0;
+}
+h5{
+  margin-bottom: 24px;
+  padding: 0 15px;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.icon ion-icon{
+  margin-right: 15px;
+}
+

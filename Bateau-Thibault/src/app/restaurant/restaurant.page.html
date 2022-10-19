@@ -1,6 +1,33 @@
+
 <app-header></app-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="content">
+  <h1 class="ion-text-center">Nos restaurants partenaires</h1>
+  <h5 class="ion-text-center">Disponibles comme point de livraison de nos produits</h5>
+  <div class="icon">
+    <div>
+      <div>
+        <ion-icon name="call"></ion-icon>06.73.99.99.78
+      </div>
 
-  <app-explore-container name="Restaurant page"></app-explore-container>
+      <div>
+        <ion-icon name="mail"></ion-icon>lebateaudethibault@gmail.com
+      </div>
+
+      <div>
+        <ion-icon name="logo-facebook"></ion-icon>www.facebook/lebateaudethibault.com
+      </div>
+    </div>
+  </div>
+  <div id="button-container">
+    <ion-grid>
+      <ion-row >
+        <ion-col size="6" *ngFor="let restaurant of restaurantList">
+          <div (click)="onLoadRestaurant(restaurant)">
+            <app-bouton-recipice url="" text="{{restaurant.name}}" src="{{restaurant.src}}_icon.png"></app-bouton-recipice>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

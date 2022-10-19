@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
 import {NavController} from '@ionic/angular';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -10,6 +11,7 @@ import {NavController} from '@ionic/angular';
 })
 export class SingleRecipicePage implements OnInit {
 
+  page : string;
   recipice: {
     name: string,
     completeName: string,
@@ -23,6 +25,7 @@ export class SingleRecipicePage implements OnInit {
       if (this.router.getCurrentNavigation().extras.state) {
         console.log(this.router.getCurrentNavigation().extras.state.recipe);
         this.recipice = this.router.getCurrentNavigation().extras.state.recipe;
+        this.page = this.router.getCurrentNavigation().extras.state.page;
       }
     });
   }
@@ -32,7 +35,8 @@ export class SingleRecipicePage implements OnInit {
   }
 
   goBack() {
-    this.navCtrl.navigateBack(['/tabs/recipe']);
+    var path = "/tabs/";
+    this.navCtrl.navigateBack([path.concat(this.page)]);
   }
 
   onSwipeLeft($event) {

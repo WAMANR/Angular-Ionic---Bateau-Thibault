@@ -28,7 +28,8 @@ export class RecipePage implements OnInit {
   onloadRecipice(recipe: Recipices){
     let navigationExtras: NavigationExtras = {
       state:{
-        recipe:recipe
+        recipe:recipe,
+        page : "recipe"
       }
     }
     this.router.navigate(['/tabs/single-recipice'],navigationExtras);

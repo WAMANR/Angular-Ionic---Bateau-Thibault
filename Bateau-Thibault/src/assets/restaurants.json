@@ -1,0 +1,33 @@
+[
+    {
+      "name" : "Bistrot Gascons",
+      "completeName" : "Le Bistrot des Gascons",
+      "src" : "../../assets/appRestaurants/restaurant-le-bistrot-des-gascons",
+      "description": "01.45.57.75.17 - 26 Av. de Tourville, 75007 Paris - lebistrotdesgascons.fr"
+    },
+    {
+      "name" : "Bistrot Landais",
+      "completeName" : "Le Bistrot Landais",
+      "src" : "../../assets/appRestaurants/restaurant-le-bistrot-landais",
+      "description": "01.49.45.11.55 - 96 Rue des Rosiers, 93400 Saint-Ouen-sur-Seine - www.facebook.com/lebistrotlandais"
+    },
+    {
+      "name" : "Les Fous de l'Île",
+      "completeName" : "Les Fous de l'Île",
+      "src" : "../../assets/appRestaurants/restaurant-fou-de-lile",
+      "description": "01.43.25.76.67 - 33 Rue des Deux Ponts, 75004 Paris - lesfousdelile.becsparisiens.fr"
+    },
+    {
+      "name" : "Villa9Trois",
+      "completeName" : "Villa9Trois",
+      "src" : "../../assets/appRestaurants/restaurant-villa9trois",
+      "description": "01.42.65.24.85 - 97 Bd Haussmann, 75008 Paris - villa9trois.com"
+    },
+    {
+      "name" : "Le Sommelier",
+      "completeName" : "Le Bistrot du Sommelier",
+      "src" : "../../assets/appRestaurants/restaurant-le-bistrot-du-sommelier",
+      "description": "01.45.57.75.17 - 26 Av. de Tourville, 75007 Paris - bistrotdusommelier.fr"
+    }
+  ]
+  

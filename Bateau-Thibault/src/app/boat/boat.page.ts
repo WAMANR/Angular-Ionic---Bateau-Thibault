@@ -26,7 +26,8 @@ export class BoatPage {
   onLoadBoat(boat : Boats){
     let navigationExtras: NavigationExtras = {
       state:{
-        recipe : boat
+        recipe : boat,
+        page : "boat"
       }
     }
     this.router.navigate(['/tabs/single-recipice'],navigationExtras);
