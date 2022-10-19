@@ -1,0 +1,27 @@
+[
+    {
+      "name" : "deLaBrise",
+      "completeName" : "De La Brise",
+      "src" : "../../assets/bateau-icon/deLaBrise",
+      "description" : "Qu'il est chaud le soleil Quand nous sommes en vacances Y a d' la joie, des hirondelles C'est le sud de la France Papa bricole au garage Maman lit dans la chaise longue Dans ce joli paysage Moi, je me balade en tongs Que de bonheur! Que de bonheur!"
+    },
+    {
+      "name" : "saphir",
+      "completeName" : "Saphir",
+      "src" : "../../assets/bateau-icon/saphir",
+      "description" : "Qu'il est chaud le soleil Quand nous sommes en vacances Y a d' la joie, des hirondelles C'est le sud de la France Papa bricole au garage Maman lit dans la chaise longue Dans ce joli paysage Moi, je me balade en tongs Que de bonheur! Que de bonheur!"
+    },
+    {
+      "name" : "gastMichers",
+      "completeName" : "Gast Michers",
+      "src" : "../../assets/bateau-icon/gastMicher",
+      "description" : "Qu'il est chaud le soleil Quand nous sommes en vacances Y a d' la joie, des hirondelles C'est le sud de la France Papa bricole au garage Maman lit dans la chaise longue Dans ce joli paysage Moi, je me balade en tongs Que de bonheur! Que de bonheur!"
+    },
+    {
+      "name" : "aquilon",
+      "completeName" : "Aquilon",
+      "src" : "../../assets/bateau-icon/aquilon",
+      "description" : "Qu'il est chaud le soleil Quand nous sommes en vacances Y a d' la joie, des hirondelles C'est le sud de la France Papa bricole au garage Maman lit dans la chaise longue Dans ce joli paysage Moi, je me balade en tongs Que de bonheur! Que de bonheur!"
+    }
+  ]
+  

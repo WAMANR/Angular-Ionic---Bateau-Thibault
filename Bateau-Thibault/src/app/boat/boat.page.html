@@ -2,37 +2,30 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true" class="content">
-  <div class="top-content">
-    <h1>Nos bateaux partenaire</h1>
-    <p>Tous les eaux mènent à Thibault</p>
-    <a href="tel:0663999978">06 63 99 99 78</a>
-    <a href="mail:vavet@mail.fr">testmail</a>
-    <p>www.faceboook.com/lebateaudethibault</p>
+  <h1 class="ion-text-center">Nos bateaux partenaires</h1>
+  <h5 class="ion-text-center">Tout les eaux mènent à Thibault</h5>
+  <div class="icon">
+    <div>
+      <div>
+        <ion-icon name="call"></ion-icon>06.73.99.99.78
+      </div>
+
+      <div>
+        <ion-icon name="mail"></ion-icon>lebateaudethibault@gmail.com
+      </div>
+
+      <div>
+        <ion-icon name="logo-facebook"></ion-icon>www.facebook/lebateaudethibault.com
+      </div>
+    </div>
   </div>
-  <ion-grid>
-    <ion-row>
-      <ion-col class="ion-padding">
-        1
-      </ion-col>
-      <ion-col class="ion-padding-top">
-        2
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="ion-padding">
-        3
-      </ion-col>
-      <ion-col class="ion-padding-top">
-        4
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="ion-padding">
-        5
-      </ion-col>
-      <ion-col class="ion-padding-top">
-        6
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div id="button-container">
+    <ion-grid>
+      <ion-row >
+        <ion-col size="6" *ngFor="let boat of boatList">
+          <app-bouton-recipice url="" text="{{boat.name}}" src="{{boat.src}}_icon.png"></app-bouton-recipice>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
