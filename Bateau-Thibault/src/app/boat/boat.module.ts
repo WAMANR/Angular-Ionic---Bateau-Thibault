@@ -10,7 +10,6 @@ import { BoatPageRoutingModule } from './boat-routing.module';
 import {SharedModule} from '../sharedModule/shared.module';
 
 
-
 @NgModule({
   imports: [
     IonicModule,

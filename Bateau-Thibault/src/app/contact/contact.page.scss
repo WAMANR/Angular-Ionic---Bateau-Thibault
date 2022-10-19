@@ -1,0 +1,31 @@
+.responsive {
+    width: 40%;
+    height: 40%;    
+    clip-path: circle();
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    line-height: 1;
+    font-size: small;
+}
+
+
+.cardconteudo {
+  background: rgba(255,255,255,0.5);
+}
+
+ion-content{ 
+  font-family:AppFont !important;
+  font-size:1.1em;
+}
+
+ion-text{ 
+  font-family:AppFont !important;
+  font-size:1.1em;
+}
