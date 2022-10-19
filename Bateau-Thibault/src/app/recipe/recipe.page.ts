@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Recipices} from '../models/recipices';
 import {RecipiceService} from '../services/recipice.service';
-import {Router} from '@angular/router';
+import {NavigationExtras, Router} from '@angular/router';
 import {error} from 'protractor';
 
 @Component({
@@ -25,7 +25,12 @@ export class RecipePage implements OnInit {
       }
   }
 
-  onLoadRecipice(recipiceList){
-
+  onloadRecipice(recipe: Recipices){
+    let navigationExtras: NavigationExtras = {
+      state:{
+        recipe:recipe
+      }
+    }
+    this.router.navigate(['/tabs/single-recipice'],navigationExtras);
   }
 }
