@@ -1,12 +1,53 @@
 
 <app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Boat</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="content">
+  <div class="top-content">
+    <h1>Nos bateaux partenaire</h1>
+    <p>Tous les eaux mènent à Thibault</p>
+    <a href="tel:0663999978">06 63 99 99 78</a>
+    <a href="mail:vavet@mail.fr">testmail</a>
+    <p>www.faceboook.com/lebateaudethibault</p>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-padding">
+        <app-redirection-button [item]="'test'"></app-redirection-button>
+      </ion-col>
+      <ion-col class="ion-padding-top">
+        <div>padding-top</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding">
+        <div>padding</div>
+      </ion-col>
+      <ion-col class="ion-padding-top">
+        <div>padding-top</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding">
+        <div>padding</div>
+      </ion-col>
+      <ion-col class="ion-padding-top">
+        <div>padding-top</div>
+      </ion-col>
+    </ion-row>
 
-  <app-explore-container name="Boat page"></app-explore-container>
+  </ion-grid>
+  <!-- <div>
+    <ion-row class="buttons">
+      <ion-col class="buttonsCOL">
+        <app-redirection-button></app-redirection-button>
+        <app-redirection-button></app-redirection-button>
+        <app-redirection-button></app-redirection-button>
+      </ion-col>
+      <ion-col class="buttonsCOL">
+        <app-redirection-button [item]="'lol'" [src]="'../../assets/bateau-icon/ancre.png'"></app-redirection-button>
+        <app-redirection-button></app-redirection-button>
+        <app-redirection-button></app-redirection-button>
+      </ion-col>
+    </ion-row>
+  </div> -->
 </ion-content>
