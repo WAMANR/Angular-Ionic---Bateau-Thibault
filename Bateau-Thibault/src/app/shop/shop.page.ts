@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import '/home/meteor314/Desktop/school-project/Angular-Ionic---Bateau-Thibault/Bateau-Thibault/src/assets/products.json';
+
 
 @Component({
   selector: 'app-shop',
@@ -217,7 +217,7 @@ export class ShopPage {
       localStorage.setItem('cart', JSON.stringify([product]));
     } else {
       //verify if product is already in cart
-      const cartProducts = JSON.parse(cart);    
+      const cartProducts = JSON.parse(cart);
       const productIndex = cartProducts.findIndex((p: any) => p.id === product.id);
       if(productIndex !== -1) {
         cartProducts[productIndex].quantity++;
@@ -226,7 +226,7 @@ export class ShopPage {
         localStorage.setItem('cart', JSON.stringify([...cartProducts, product]));
       }
     }
-    
+
   }
   removeProduct(product : any) {
     console.log('remove product');
@@ -242,7 +242,7 @@ export class ShopPage {
         localStorage.setItem('cart', JSON.stringify(cartProducts));
       }
     }
-      
+
   } //hope it works
 
   getQuantity(product: any) {

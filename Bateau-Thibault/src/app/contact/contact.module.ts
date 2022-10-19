@@ -8,6 +8,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { ContactPageRoutingModule } from './contact-routing.module';
 
 import {SharedModule} from '../sharedModule/shared.module';
+import {BoutonRecipiceComponent} from '../component/bouton-recipice/bouton-recipice.component';
+
 
 @NgModule({
   imports: [
@@ -18,6 +20,9 @@ import {SharedModule} from '../sharedModule/shared.module';
     ContactPageRoutingModule,
     SharedModule
   ],
-  declarations: [ContactPage]
+  exports: [
+    BoutonRecipiceComponent
+  ],
+  declarations: [ContactPage, BoutonRecipiceComponent]
 })
 export class ContactPageModule {}
