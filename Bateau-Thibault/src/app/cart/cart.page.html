@@ -10,11 +10,14 @@
               >Select your restaurant:
               <!-- drop down list to select a restaurant -->
               <p>{{ handlerMessage }}</p>
-<p>{{ roleMessage }}</p>
+              <p>{{ roleMessage }}</p>
 
               <ion-list>
                 <ion-item>
-                  <ion-select placeholder="Select fruit"  (ionChange)="changeOption($event)">
+                  <ion-select
+                    placeholder="Select restaurant : "
+                    (ionChange)="changeOption($event)"
+                  >
                     <ion-select-option value="1">
                       Bistrot des Gascons</ion-select-option
                     >
@@ -24,8 +27,12 @@
                     <ion-select-option value="3">
                       Bistrot Landais</ion-select-option
                     >
-                    <ion-select-option value="4">Villa 9-Trois</ion-select-option>
-                    <ion-select-option value="5"> Bistrot du Sommelier</ion-select-option>
+                    <ion-select-option value="4"
+                      >Villa 9-Trois</ion-select-option
+                    >
+                    <ion-select-option value="5">
+                      Bistrot du Sommelier</ion-select-option
+                    >
                     <ion-select-option value="6"> Test</ion-select-option>
                   </ion-select>
                 </ion-item>
