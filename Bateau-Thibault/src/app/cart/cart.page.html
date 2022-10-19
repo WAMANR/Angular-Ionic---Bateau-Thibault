@@ -17,28 +17,29 @@
                   <h2>Price : {{product.price}} €</h2>
                   <p>Category : {{product.category}}</p>
                 </ion-label>
-                <!--   quantity button  with add and remove button -->
-                <ion-button
-                  (click)="addProduct(product)"
-                  color="success"
-                  fill="outline"
-                  slot="end"
-                >
-                  <ion-icon slot="icon-only" name="add"></ion-icon>
-                </ion-button>
                 
                 <ion-button slot="end" > 
-                  {{ getQuantity(product) }} </ion-button>
+                  Product Quantity : 
+                  {{
+                    product.quantity
+                  }}
+                 </ion-button>
 
-                <ion-button
-                  (click)="removeProduct(product)"
-                  color="danger"
-                  fill="outline"
-                  slot="end"
-                >
-                  <ion-icon slot="icon-only" name="remove"></ion-icon>
-                </ion-button>
+                 <ion-button slot="end">
+                  Price : 
+                  {{
+                    product.quantity * product.price
+                  }}
+                 </ion-button>
+
+
               </ion-item>
+              <h1>
+                Total Price : 
+                {{
+                  total
+                }}
+              </h1>
             </ion-list>
           </ion-card-content>
         </ion-card>
