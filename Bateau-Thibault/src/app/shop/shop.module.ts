@@ -6,7 +6,8 @@ import { ShopPage } from './shop.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { ShopPageRoutingModule } from './shop-routing.module';
-import { HeaderComponent } from '../header/header.component';
+import {SharedModule} from '../sharedModule/shared.module';
+
 
 @NgModule({
   imports: [
@@ -14,8 +15,9 @@ import { HeaderComponent } from '../header/header.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    ShopPageRoutingModule
+    ShopPageRoutingModule,
+    SharedModule
   ],
-  declarations: [ShopPage, HeaderComponent]
+  declarations: [ShopPage]
 })
 export class ShopPageModule {}
