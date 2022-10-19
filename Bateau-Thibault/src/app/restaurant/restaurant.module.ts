@@ -6,7 +6,8 @@ import { RestaurantPage } from './restaurant.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { RestaurantPageRoutingModule } from './restaurant-routing.module';
-import { HeaderComponent } from '../header/header.component';
+import {SharedModule} from '../sharedModule/shared.module';
+
 
 @NgModule({
   imports: [
@@ -14,8 +15,9 @@ import { HeaderComponent } from '../header/header.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RestaurantPageRoutingModule
+    RestaurantPageRoutingModule,
+    SharedModule
   ],
-  declarations: [RestaurantPage, HeaderComponent]
+  declarations: [RestaurantPage]
 })
 export class RestaurantPageModule {}
