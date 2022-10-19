@@ -20,9 +20,6 @@ import {BoutonRecipiceComponent} from '../component/bouton-recipice/bouton-recip
     ContactPageRoutingModule,
     SharedModule
   ],
-  exports: [
-    BoutonRecipiceComponent
-  ],
-  declarations: [ContactPage, BoutonRecipiceComponent]
+  declarations: [ContactPage]
 })
 export class ContactPageModule {}

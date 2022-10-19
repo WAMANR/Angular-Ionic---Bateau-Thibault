@@ -18,8 +18,7 @@ import {ContactPageModule} from "../contact/contact.module";
         FormsModule,
         ExploreContainerComponentModule,
         RecipePageRoutingModule,
-        SharedModule,
-        ContactPageModule
+        SharedModule
     ],
   declarations: [RecipePage]
 })
