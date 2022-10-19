@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cart',
@@ -6,20 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.page.scss'],
 })
 export class CartPage implements OnInit {
+  handlerMessage = '';
+  roleMessage = '';
 
+  constructor(private toastController: ToastController) {}
 
+  ngOnInit() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  //  show cart from local storage 
+  //  show cart from local storage
   getCart() {
-    const response =  JSON.parse(localStorage.getItem('cart'));
-    console.log("response", response);
+    const response = JSON.parse(localStorage.getItem('cart'));
+    console.log('response', response);
     return response;
-    
   }
 
   products = this.getCart();
@@ -34,5 +33,23 @@ export class CartPage implements OnInit {
 
   total = this.totalPrice();
 
+  // changeOption( get the value of the select option and update the quantity of the product in the cart)
+  async changeOption(event: any) {
+    const selectRestaurant = event.target.value;
+    let isSelect = false;
+    if (selectRestaurant >= '1' && selectRestaurant <= '5') {
+      isSelect = true;
+    }
 
+    isSelect
+      ? (this.handlerMessage = 'Submitted with suceess')
+      : (this.handlerMessage = 'An error occured');
+
+    const toast = await this.toastController.create({
+      message: this.handlerMessage,
+      duration: 3000,
+    });
+
+    await toast.present();
+  }
 }
