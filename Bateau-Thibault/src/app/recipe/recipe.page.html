@@ -25,7 +25,7 @@
       <ion-row>
         <ion-col *ngFor="let recipe of recipiceList" size="6" >
           <div (click)="onloadRecipice(recipe)">
-          <app-bouton-recipice url="/single-recipice"  text="{{recipe.name}}" src="{{recipe.src}}_icon.png"></app-bouton-recipice>
+          <app-bouton-recipice  text="{{recipe.name}}" src="{{recipe.src}}_icon.png"></app-bouton-recipice>
           </div>
         </ion-col>
       </ion-row>
