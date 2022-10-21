@@ -18,7 +18,6 @@ export class RecipePage implements OnInit {
   ngOnInit() {
     this.recipiceService.getRecipice().subscribe( res =>{
       this.recipiceList = res;
-      console.log(res);
     }),
       err =>{
         console.log('error');
