@@ -24,6 +24,9 @@
                     <ion-select-option value="1"
                       >Coquillages</ion-select-option
                     >
+                    <ion-select-option value="3"
+                      >All products</ion-select-option
+                    >
                   </ion-select>
                 </ion-item>
               </ion-list>
@@ -33,7 +36,7 @@
 
           <ion-card-content>
             <ion-list>
-              <ion-item *ngFor="let product of products">
+              <ion-item *ngFor="let product of tmpProducts">
                 <ion-label>
                   <h2>{{ product.name }}</h2>
                   <p>{{ product.description }}</p>

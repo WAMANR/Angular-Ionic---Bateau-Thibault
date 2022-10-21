@@ -207,6 +207,7 @@ export class ShopPage {
       quantity: 1,
     },
   ];
+  tmpProducts = this.products;
 
   constructor(
     private toastController: ToastController,
@@ -273,15 +274,15 @@ export class ShopPage {
   async changeOption(event: any) {
     const selectRestaurant = event.target.value;
     let isSelect = false;
-    if (selectRestaurant >= '1' && selectRestaurant <= '5') {
+    if (selectRestaurant >= '1' && selectRestaurant <= '2') {
       isSelect = true;
     }
     if (isSelect) {
-      this.products = this.products.filter(
+      this.tmpProducts = this.products.filter(
         (product) => product.category === parseInt(selectRestaurant)
       );
       } else {
-      this.products = this.products;
+      this.tmpProducts = this.products;
     }
 
 
