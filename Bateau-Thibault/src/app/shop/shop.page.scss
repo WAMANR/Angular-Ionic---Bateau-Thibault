@@ -1,0 +1,25 @@
+#data-card-shop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width:380px) { 
+    #button-end{
+        display: flex;
+        flex-direction: column;
+    }
+} 
+
+@media (max-width:248px) { 
+    #button-end{
+        display: flex;
+        flex-direction: row;
+    }
+    #data-card-shop{
+        display: flex;
+        flex-direction: column;
+    }
+    
+} 

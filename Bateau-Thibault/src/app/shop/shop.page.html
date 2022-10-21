@@ -6,27 +6,18 @@
       <ion-col size="12">
         <ion-card>
           <ion-card-header>
-            <ion-card-title
-          >  Select a category :
+            <ion-card-title> Select a category :
               <!-- drop down list to select a restaurant -->
               <p>{{ handlerMessage }}</p>
               <p>{{ roleMessage }}</p>
 
               <ion-list>
                 <ion-item>
-                  <ion-select
-                    placeholder="Select restaurant : "
-                    (ionChange)="changeOption($event)"
-                  >
+                  <ion-select placeholder="Select a categorie : " (ionChange)="changeOption($event)">
                     <ion-select-option value="0">
-                      Poissons</ion-select-option
-                    >
-                    <ion-select-option value="1"
-                      >Coquillages</ion-select-option
-                    >
-                    <ion-select-option value="3"
-                      >All products</ion-select-option
-                    >
+                      Poissons</ion-select-option>
+                    <ion-select-option value="1">Coquillages</ion-select-option>
+                    <ion-select-option value="3">All products</ion-select-option>
                   </ion-select>
                 </ion-item>
               </ion-list>
@@ -37,32 +28,27 @@
           <ion-card-content>
             <ion-list>
               <ion-item *ngFor="let product of tmpProducts">
-                <ion-label>
-                  <h2>{{ product.name }}</h2>
-                  <p>{{ product.description }}</p>
-                  <h2>Price : {{product.price}} €</h2>
-                  <p>Category : {{product.category}}</p>
-                </ion-label>
-                <!--   quantity button  with add and remove button -->
-                <ion-button
-                  (click)="addProduct(product)"
-                  color="success"
-                  fill="outline"
-                  slot="end"
-                >
-                  <ion-icon slot="icon-only" name="add"></ion-icon>
-                </ion-button>
+                <div id="data-card-shop">
+                  <ion-label>
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <h2>Price : {{product.price}} €</h2>
+                    <p>Category : {{product.category}}</p>
+                  </ion-label>
+                  <!--   quantity button  with add and remove button -->
+                  <div id="button-end" slot="end">
+                    <ion-button (click)="addProduct(product)" color="success" fill="outline" slot="end">
+                      <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
 
-                <ion-button slot="end"> {{ getQuantity(product) }} </ion-button>
+                    <ion-button slot="end"> {{ getQuantity(product) }} </ion-button>
 
-                <ion-button
-                  (click)="removeProduct(product)"
-                  color="danger"
-                  fill="outline"
-                  slot="end"
-                >
-                  <ion-icon slot="icon-only" name="remove"></ion-icon>
-                </ion-button>
+                    <ion-button (click)="removeProduct(product)" color="danger" fill="outline" slot="end">
+                      <ion-icon slot="icon-only" name="remove"></ion-icon>
+                    </ion-button>
+                  </div>
+
+                </div>
               </ion-item>
             </ion-list>
           </ion-card-content>
