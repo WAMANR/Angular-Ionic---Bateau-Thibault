@@ -8,7 +8,7 @@
         <ion-card>
           <ion-card-header>
             <ion-card-title
-              >Select your restaurant:
+              >Choisissez votre restaurant:
               <!-- drop down list to select a restaurant -->
               <p>{{ handlerMessage }}</p>
               <p>{{ roleMessage }}</p>
@@ -16,7 +16,7 @@
               <ion-list>
                 <ion-item>
                   <ion-select
-                    placeholder="Select restaurant : "
+                    placeholder="Choisir restaurant : "
                     (ionChange)="changeOption($event)"
                   >
                     <ion-select-option value="1">
@@ -47,22 +47,22 @@
                   <ion-label>
                     <h2>{{ product.name }}</h2>
                     <p>{{ product.description }}</p>
-                    <h2>Price : {{product.price}} €</h2>
-                    <p>Category : {{product.category}}</p>
+                    <h2>Prix : {{product.price}}€/{{product.unit}}</h2>
+                    <p>Categorie : {{product.category}}</p>
                   </ion-label>
                   <div class="data-cart-row" slot="end">
                     <ion-button>
-                      Product Quantity : {{ product.quantity }}
+                      Quantité : {{ product.quantity }}
                     </ion-button>
 
                     <ion-button>
-                      Price : {{ product.quantity * product.price }}
+                      Prix : {{ product.quantity * product.price }}
                     </ion-button>
                   </div>
                 </div>
                 <hr />
-              </ion-item>
-              <h1>Total Price : {{ total }}</h1>
+              </ion-item >
+              <h1>Prix total : {{ total }}€</h1>
             </ion-list>
           </ion-card-content>
         </ion-card>
