@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-shop',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['shop.page.scss'],
 })
 export class ShopPage {
+  handlerMessage = '';
+  roleMessage = '';
   products = [
     {
       id: 12,
@@ -203,57 +205,92 @@ export class ShopPage {
       comments: '',
       owner: 'tig',
       quantity: 1,
-    }
+    },
   ];
-  constructor() {}
-  ngOnInit() {
-  }
+  tmpProducts = this.products;
 
-  addProduct(product : any) {
+  constructor(
+    private toastController: ToastController,
+    private navCtrl: NavController
+  ) {}
+  ngOnInit() {}
+
+  addProduct(product: any) {
     // verify if product is already in cart and increment quantity instead of adding it in local storage
     console.log('add product');
     const cart = localStorage.getItem('cart');
-    if(!cart) {
+    if (!cart) {
       localStorage.setItem('cart', JSON.stringify([product]));
     } else {
       //verify if product is already in cart
       const cartProducts = JSON.parse(cart);
-      const productIndex = cartProducts.findIndex((p: any) => p.id === product.id);
-      if(productIndex !== -1) {
+      const productIndex = cartProducts.findIndex(
+        (p: any) => p.id === product.id
+      );
+      if (productIndex !== -1) {
         cartProducts[productIndex].quantity++;
         localStorage.setItem('cart', JSON.stringify(cartProducts));
       } else {
-        localStorage.setItem('cart', JSON.stringify([...cartProducts, product]));
+        localStorage.setItem(
+          'cart',
+          JSON.stringify([...cartProducts, product])
+        );
       }
     }
-
   }
-  removeProduct(product : any) {
+  removeProduct(product: any) {
     console.log('remove product');
     const cart = localStorage.getItem('cart');
-    if(cart) {
+    if (cart) {
       const cartProducts = JSON.parse(cart);
-      const productIndex = cartProducts.findIndex((p: any) => p.id === product.id);
-      if(productIndex !== -1) {
+      const productIndex = cartProducts.findIndex(
+        (p: any) => p.id === product.id
+      );
+      if (productIndex !== -1) {
         cartProducts[productIndex].quantity--;
-        if(cartProducts[productIndex].quantity === 0) {
+        if (cartProducts[productIndex].quantity === 0) {
           cartProducts.splice(productIndex, 1);
         }
         localStorage.setItem('cart', JSON.stringify(cartProducts));
       }
     }
-
   } //hope it works
 
   getQuantity(product: any) {
     const cart = localStorage.getItem('cart');
-    if(cart) {
+    if (cart) {
       const cartProducts = JSON.parse(cart);
-      const productIndex = cartProducts.findIndex((p: any) => p.id === product.id);
-      if(productIndex !== -1) {
+      const productIndex = cartProducts.findIndex(
+        (p: any) => p.id === product.id
+      );
+      if (productIndex !== -1) {
         return cartProducts[productIndex].quantity;
       }
     }
     return 0;
+  }
+
+  // filter products by category 1  = fruits de mer, 0 = poissons
+  async changeOption(event: any) {
+    const selectRestaurant = event.target.value;
+    let isSelect = false;
+    if (selectRestaurant >= '1' && selectRestaurant <= '2') {
+      isSelect = true;
+    }
+    if (isSelect) {
+      this.tmpProducts = this.products.filter(
+        (product) => product.category === parseInt(selectRestaurant)
+      );
+      } else {
+      this.tmpProducts = this.products;
+    }
+
+
+    const toast = await this.toastController.create({
+      message: this.handlerMessage,
+      duration: 3000,
+    });
+
+    await toast.present();
   }
 }

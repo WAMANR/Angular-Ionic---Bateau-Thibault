@@ -6,11 +6,37 @@
       <ion-col size="12">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Shop</ion-card-title>
+            <ion-card-title
+          >  Select a category :
+              <!-- drop down list to select a restaurant -->
+              <p>{{ handlerMessage }}</p>
+              <p>{{ roleMessage }}</p>
+
+              <ion-list>
+                <ion-item>
+                  <ion-select
+                    placeholder="Select restaurant : "
+                    (ionChange)="changeOption($event)"
+                  >
+                    <ion-select-option value="0">
+                      Poissons</ion-select-option
+                    >
+                    <ion-select-option value="1"
+                      >Coquillages</ion-select-option
+                    >
+                    <ion-select-option value="3"
+                      >All products</ion-select-option
+                    >
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-card-title>
           </ion-card-header>
+
+
           <ion-card-content>
             <ion-list>
-              <ion-item *ngFor="let product of products">
+              <ion-item *ngFor="let product of tmpProducts">
                 <ion-label>
                   <h2>{{ product.name }}</h2>
                   <p>{{ product.description }}</p>
@@ -26,9 +52,8 @@
                 >
                   <ion-icon slot="icon-only" name="add"></ion-icon>
                 </ion-button>
-                
-                <ion-button slot="end" > 
-                  {{ getQuantity(product) }} </ion-button>
+
+                <ion-button slot="end"> {{ getQuantity(product) }} </ion-button>
 
                 <ion-button
                   (click)="removeProduct(product)"
