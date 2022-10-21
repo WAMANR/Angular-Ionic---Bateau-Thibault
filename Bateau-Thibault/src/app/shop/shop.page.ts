@@ -130,7 +130,7 @@ export class ShopPage {
     },
     {
       id: 13,
-      name: 'Huîtres N°2 OR St Vaast',
+      name: 'Huîtres N°2 OR Vaast',
       category: 1,
       price: 12.0,
       unit: 'Dz',
@@ -143,7 +143,7 @@ export class ShopPage {
     },
     {
       id: 14,
-      name: 'Huîtres N°2 OR St Vaast',
+      name: 'Huîtres N°2 OR Vaast',
       category: 1,
       price: 24.0,
       unit: '2 Dz',
@@ -156,7 +156,7 @@ export class ShopPage {
     },
     {
       id: 15,
-      name: 'Huîtres N°2 OR St Vaast',
+      name: 'Huîtres N°2 OR Vaast',
       category: 1,
       price: 48.0,
       unit: '4 Dz',
